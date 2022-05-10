@@ -45,7 +45,7 @@ jobs:
         npm install
         npm run start
         # 插件会拉取知识库下所有的文档，此命令是过滤出API文档的md文件，其他文件删除
-        find docs/* ! -name "VE730*.md" -type f -print -exec rm -rf {} \;
+        find docs/* ! -name "VDPRO3*.md" -type f -print -exec rm -rf {} \;
 
     # 将md文件提交到当前git仓库
     # from https://github.com/peaceiris/actions-gh-pages    
