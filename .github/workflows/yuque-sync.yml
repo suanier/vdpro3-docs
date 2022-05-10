@@ -1,18 +1,8 @@
 # workflow name
 name: Deploy To Github Pages
 
-# 当有 push 到仓库和外部（语雀webhook）触发的时候就运行
-on: 
-  # 本地测试时可以开启，部署后不建议开启，因为会涉及到更改一些配置，会多次频繁触发构建
-	# 允许手动push触发
-  push:
-     branches:
-       - master
-  # 允许外部仓库事件触发
-  repository_dispatch:
-    types:
-    	# 这里的值需要和下文的云函数的event_type保持一致
-      - start
+# 当有 push 到仓库和外部触发的时候就运行
+on: [push, repository_dispatch]
 
 # YUQUE_TOKEN
 # Github_SSH_PRIVATE_KEY
@@ -37,23 +27,19 @@ jobs:
     
     # 同步语雀知识库文档
     # from https://github.com/x-cold/yuque-hexo
-    - name: Sync yuque Files
+    - name: Setup Hexo Dependencies and Generate Public Files
       env:
-        # 语雀token需要在github仓库环境变量中添加
         YUQUE_TOKEN: ${{ secrets.YUQUE_TOKEN }}
       run: |
-        npm install
+        npm install yuque-hexo -g
         npm run start
-        # 插件会拉取知识库下所有的文档，此命令是过滤出API文档的md文件，其他文件删除
         find docs/* ! -name "VDPRO3*.md" -type f -print -exec rm -rf {} \;
 
-    # 将md文件提交到当前git仓库
     # from https://github.com/peaceiris/actions-gh-pages    
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
-          # GITHUB_TOKEN不用配置在环境变量中
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          deploy_key: ${{ secrets.SSH_PRIVATE_KEY }}
           publish_branch: master
           publish_dir: ./docs
           destination_dir: ./docs
