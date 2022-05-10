@@ -36,7 +36,7 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          # publish_branch: master
+          deploy_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          publish_branch: master
           publish_dir: ./docs
           destination_dir: ./docs
