@@ -79,11 +79,11 @@
 
 ### 1.3 二维码对接流程图
 
-![5ddf84367d2a9.jpg](https://cdn.nlark.com/yuque/0/2022/jpeg/21571470/1652168785033-c19ea5e2-45d6-40a0-8497-7e1211cf1291.jpeg#clientId=u5bb6dc9a-689a-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u45f12bb3&name=5ddf84367d2a9.jpg&originHeight=853&originWidth=1137&originalType=binary&ratio=1&rotation=0&showTitle=false&size=64735&status=done&style=none&taskId=u6347ffc4-b3ff-47ad-9cb6-413d3c7b91f&title=)
+![5ddf84367d2a9.jpg](https://cdn.nlark.com/yuque/0/2022/jpeg/21571470/1652168785033-c19ea5e2-45d6-40a0-8497-7e1211cf1291.jpeg#clientId=u5bb6dc9a-689a-4&crop=0&crop=0&crop=1&crop=1&errorMessage=unknown%20error&from=ui&id=u45f12bb3&name=5ddf84367d2a9.jpg&originHeight=853&originWidth=1137&originalType=binary&ratio=1&rotation=0&showTitle=false&size=64735&status=error&style=none&taskId=u6347ffc4-b3ff-47ad-9cb6-413d3c7b91f&title=)
 
 ### 1.4 手环对接流程图
 
-![5ddf8441dedf6-123.jpg](https://cdn.nlark.com/yuque/0/2022/jpeg/21571470/1652168832363-8f9f26e1-210e-4d54-a4a8-6d174332f08b.jpeg#clientId=u5bb6dc9a-689a-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u9c060306&name=5ddf8441dedf6-123.jpg&originHeight=855&originWidth=1136&originalType=binary&ratio=1&rotation=0&showTitle=false&size=70539&status=done&style=none&taskId=uec35234d-19a8-4ed8-9688-b25bdc98605&title=)
+![5ddf8441dedf6-123.jpg](https://cdn.nlark.com/yuque/0/2022/jpeg/21571470/1652168832363-8f9f26e1-210e-4d54-a4a8-6d174332f08b.jpeg#clientId=u5bb6dc9a-689a-4&crop=0&crop=0&crop=1&crop=1&errorMessage=unknown%20error&from=ui&id=u9c060306&name=5ddf8441dedf6-123.jpg&originHeight=855&originWidth=1136&originalType=binary&ratio=1&rotation=0&showTitle=false&size=70539&status=error&style=none&taskId=uec35234d-19a8-4ed8-9688-b25bdc98605&title=)
 
 ## 2. 接口规则
 
@@ -387,6 +387,7 @@ https://api.dpro3.visbody.com/appAuth/menuCallBack
 | phone                | 否   | string | 手机                                       |
 | sex                  | 否   | string | f 女，m 　男                               |
 | height               | 否   | int    | 身高                                       |
+| project              | 是   | object | 本次测量项目                               |
 | action_status        | 是   | object | 状态信息                                   |
 | measure_status       | 否   | int    | 体测的合成状态，０失败，１成功，２超时     |
 | eval_status          | 否   | int    | 体态的合成状态，０失败，１成功，２超时     |
@@ -408,6 +409,7 @@ https://api.dpro3.visbody.com/appAuth/menuCallBack
     "phone": "13812345678",
     "sex": "f"
   },
+  "project":["measure_status","eval_status","bia_status","bodypredict_status","tchar_status","eval_dynamic_status","eval_shoulder_status"],
   "action_status":{
     "measure_status":0,
     "eval_status":0,
