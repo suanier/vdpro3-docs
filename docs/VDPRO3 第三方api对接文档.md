@@ -73,9 +73,9 @@
 
 | 参数名 | 参数值                                              |
 | ------ | --------------------------------------------------- |
-| key    | vfqnZJjFZI7g2co5                                    |
-| secret | uya7XyQJ3tgyMAUqOPY0BLRR8FqAxT8r                    |
-| scanid | 22041910080001-f01eda99-ceb4-11eb-841c-00d861a9ecd9 |
+| key    | vfB4F2FCxnTPcs7G                                    |
+| secret | d8WDGLnv0j4n4SMIsCyf8sDCFOHNYvNM                    |
+| scanid | 22041910080005-f2fe2cc2-23ba-11ed-9ca8-00d861faf16d |
 
 ### 1.3 二维码对接流程图
 
