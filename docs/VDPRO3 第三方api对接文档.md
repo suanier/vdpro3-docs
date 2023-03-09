@@ -713,6 +713,16 @@ $headers[]  =  "Authorization: Bearer ". $vfToken;
 }
 ```
 
+**范围参数说明**
+
+| 参数名 | 类型   | 说明                    |
+| ------ | ------ | ----------------------- |
+| l      | double | 下限值                  |
+| m      | double | 标准值                  |
+| h      | double | 上限值                  |
+| v      | int    | 测量值                  |
+| status | object | 状态 1 低，２正常，３高 |
+
 #### 3.3.3 获取围度数据
 
 **接口描述：**
@@ -767,7 +777,7 @@ $headers[]  =  "Authorization: Bearer ". $vfToken;
 | right_thigh_girth     | double | 右大腿围(cm) |
 | left_calf_girth       | double | 左小腿围(cm) |
 | right_calf_girth      | double | 右小腿围(cm) |
-| height                | double | 输入身高(cm) |
+| height                | int    | 输入身高(cm) |
 
 #### 3.3.4 获取用户脂肪等级
 
