@@ -749,7 +749,7 @@ $headers[]  =  "Authorization: Bearer ". $vfToken;
     "right_thigh_girth": 56.2,
     "left_calf_girth": 37.1,
     "right_calf_girth": 34.5,
-    "height": 161.1
+    "height": 161
   }
 }
 ```
