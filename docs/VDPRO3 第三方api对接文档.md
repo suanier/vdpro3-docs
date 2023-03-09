@@ -720,8 +720,8 @@ $headers[]  =  "Authorization: Bearer ". $vfToken;
 | l      | double | 下限值                  |
 | m      | double | 标准值                  |
 | h      | double | 上限值                  |
-| v      | double    | 测量值                  |
-| status | int | 状态 1 低，２正常，３高 |
+| v      | double | 测量值                  |
+| status | int    | 状态 1 低，２正常，３高 |
 
 #### 3.3.3 获取围度数据
 
