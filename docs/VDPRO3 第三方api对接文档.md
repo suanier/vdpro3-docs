@@ -1608,6 +1608,46 @@ $headers[]  =  "Authorization: Bearer ". $vfToken;
 
 注：结论及建议包含所有测量项目，若只做单个项目则只返回单个项目结论及建议
 
+### 3.7.2 获取 pdf 文件报告信息
+
+**接口描述：**
+
+- 用于获取测量报告的 pdf 文件信息
+
+**请求 URL：**
+
+- `http://api.dpro3.visbody.com/v1/report/pdf`
+
+**请求方式：**
+
+- GET
+
+**参数：**
+
+| 参数名  | 必选 | 类型   | 说明     |
+| ------- | ---- | ------ | -------- |
+| token   | 是   | string | 接口凭证 |
+| scan_id | 是   | string | 扫描 ID  |
+
+**返回示例**
+
+```json
+{
+  "code": 0,
+  "data": {
+    "url": "https://print.visbodyfit.com/report/vr-pro3/pdf/34041 91208001290dcc82d-eddd-11eb-a7ae-704d7b2aef30-vrpro3-test.pdf?_upt=00 f370fa1642650127.657",
+    "expires_in": 7200
+  }
+}
+```
+
+**返回参数说明**
+
+| 参数名     | 类型   | 说明         |
+| ---------- | ------ | ------------ |
+| url        | string | pdf 文件路径 |
+| expires_in | int    | url 有效时间 |
+
 ## 3.8 维塑返回状态码说明
 
 维塑的接口响应通过 HTTP 状态码及业务状态码区分，业务状态码在 response body 里标记
