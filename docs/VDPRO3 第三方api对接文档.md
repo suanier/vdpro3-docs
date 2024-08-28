@@ -806,7 +806,8 @@ $headers[]  =  "Authorization: Bearer ". $vfToken;
 {
   "code": 0,
   "data": {
-    "va_grade": 9
+    "va_grade": 9,
+    "metabolic_age": 10
   }
 }
 ```
@@ -816,6 +817,7 @@ $headers[]  =  "Authorization: Bearer ". $vfToken;
 | 参数名   | 类型 | 说明                                                  |
 | -------- | ---- | ----------------------------------------------------- |
 | va_grade | int  | 内脏脂肪等级(110 正常，1014 过高，14~17 高，>17 超高) |
+| metabolic_age | int | 代谢年龄 |
 
 #### 3.3.5 获取用户身体评分
 
